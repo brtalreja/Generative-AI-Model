@@ -12,3 +12,7 @@ text = next(iter(dataset['train']))['text'].numpy().decode('utf-8')
 vocab = sorted(set(text))
 char2idx = {char: idx for idx, char in enumerate(vocab)}
 idx2char = np.array(vocab)
+
+# Representing the characters numerically
+text_as_int = np.array([char2idx[c] for c in text])
+
