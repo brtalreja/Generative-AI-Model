@@ -16,3 +16,11 @@ idx2char = np.array(vocab)
 # Representing the characters numerically
 text_as_int = np.array([char2idx[c] for c in text])
 
+# create training examples and targets
+seq_length = 100
+examples_per_epoch = len(text) // (seq_length + 1)
+
+# create training sequences
+char_dataset = tf.data.Dataset.from_tensor_slices(text_as_int)
+
+sequences = char_dataset.batch(seq_length + 1, drop_remainder=True)
