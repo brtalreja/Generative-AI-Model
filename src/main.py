@@ -32,3 +32,14 @@ def split_input_target(chunk):
     return input_text, target_text
 
 dataset = sequences.map(split_input_target)
+
+#Shuffling the dataset and packing it in training batches
+BATCH_SIZE = 64
+BUFFER_SIZE = 10000
+
+dataset = (
+    dataset
+    .shuffle(BUFFER_SIZE)
+    .batch(BATCH_SIZE, drop_remainder=True)
+    .prefetch(tf.data.experimental.AUTOTUNE)
+)
