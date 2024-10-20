@@ -43,3 +43,22 @@ dataset = (
     .batch(BATCH_SIZE, drop_remainder=True)
     .prefetch(tf.data.experimental.AUTOTUNE)
 )
+
+# length of the vocabulary
+vocab_size = len(vocab)
+
+# the embedding dimension
+embedding_dim = 256
+
+# number of RNN units
+rnn_units = 1024
+
+def build_model(vocab_size, embedding_dim, rnn_units, batch_size):
+    model = tf.keras.Sequential([
+        tf.keras.layers.Embedding(vocab_size, embedding_dim, batch_input_shape=[batch_size, None]),
+        tf.keras.layers.LSTM(rnn_units, return_sequences=True, stateful=True, recurrent_initializer='glorot_uniform'),
+        tf.keras.layers.Dense(vocab_size)
+    ])
+    return model
+
+model = build_model(vocab_size, embedding_dim, rnn_units, BATCH_SIZE)
