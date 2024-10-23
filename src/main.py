@@ -84,3 +84,7 @@ checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
 # train the model
 EPOCHS = 10
 history = model.fit(dataset, epochs=EPOCHS, callbacks=[checkpoint_callback])
+
+model = build_model(vocab_size, embedding_dim, rnn_units, batch_size=1)
+model.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+model.build(tf.TensorShape([1, None]))
