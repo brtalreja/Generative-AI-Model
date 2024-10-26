@@ -2,6 +2,7 @@
 import tensorflow as tf
 import tensorflow_datasets as tfds
 import numpy as np
+import os
 
 dataset, info = tfds.load('tiny_shakespeare', with_info = True, as_supervised=False)
 
@@ -67,8 +68,6 @@ def loss(labels, logits):
     return tf.keras.losses.sparse_categorical_crossentropy(labels, logits, from_logits=True)
 
 model.compile(optimizer='adam', loss=loss)
-
-import os
 
 # directory where the checkpoints will be saved
 checkpoint_dir = './training_checkpoints'
