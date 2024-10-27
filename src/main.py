@@ -17,11 +17,11 @@ idx2char = np.array(vocab)
 # Representing the characters numerically
 text_as_int = np.array([char2idx[c] for c in text])
 
-# create training examples and targets
+# Creating training examples and targets
 seq_length = 100
 examples_per_epoch = len(text) // (seq_length + 1)
 
-# create training sequences
+# Creating training sequences
 char_dataset = tf.data.Dataset.from_tensor_slices(text_as_int)
 
 sequences = char_dataset.batch(seq_length + 1, drop_remainder=True)
@@ -34,7 +34,7 @@ def split_input_target(chunk):
 
 dataset = sequences.map(split_input_target)
 
-#Shuffling the dataset and packing it in training batches
+# Shuffling the dataset and packing it in training batches
 BATCH_SIZE = 64
 BUFFER_SIZE = 10000
 
@@ -45,13 +45,13 @@ dataset = (
     .prefetch(tf.data.experimental.AUTOTUNE)
 )
 
-# length of the vocabulary
+# Length of the vocabulary
 vocab_size = len(vocab)
 
-# the embedding dimension
+# Number of embedding dimensions
 embedding_dim = 256
 
-# number of RNN units
+# Number of RNN units
 rnn_units = 1024
 
 def build_model(vocab_size, embedding_dim, rnn_units, batch_size):
@@ -69,7 +69,7 @@ def loss(labels, logits):
 
 model.compile(optimizer='adam', loss=loss)
 
-# directory where the checkpoints will be saved
+# Directory where the checkpoints will be saved
 checkpoint_dir = './training_checkpoints'
 
 # name of the checkpoint files
