@@ -64,6 +64,8 @@ def build_model(vocab_size, embedding_dim, rnn_units, batch_size):
 
 model = build_model(vocab_size, embedding_dim, rnn_units, BATCH_SIZE)
 
+# Cross entropy loss and Adam optimizer
+
 def loss(labels, logits):
     return tf.keras.losses.sparse_categorical_crossentropy(labels, logits, from_logits=True)
 
