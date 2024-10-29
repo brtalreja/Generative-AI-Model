@@ -6,6 +6,8 @@ We can use generative AI models for various applications such as content creatio
 
 ## Model overview and detail
 
+RNN model with LSTM
+
 ## Conclusion
 
 ## References
