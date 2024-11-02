@@ -12,4 +12,5 @@ RNN model with LSTM
 
 ## References
 1. [LSTM](https://medium.com/@rebeen.jaff/what-is-lstm-introduction-to-long-short-term-memory-66bd3855b9ce)
-2. 
+2. [RNN and LSTM](https://aditi-mittal.medium.com/understanding-rnn-and-lstm-f7cdf6dfc14e)
+3. 
