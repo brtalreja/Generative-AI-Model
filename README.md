@@ -23,4 +23,3 @@ RNN model with LSTM: Recurrent Neural Network model with Long Short Term Memory
 3. [Project Reference](https://thecleverprogrammer.com/2024/01/22/text-generation-model-using-python/)
 4. [Dataset](https://huggingface.co/datasets/karpathy/tiny_shakespeare)
 5. [Text Generation](https://huggingface.co/tasks/text-generation)
-6. 
