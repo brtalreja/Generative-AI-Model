@@ -10,9 +10,7 @@ RNN model with LSTM: Recurrent Neural Network model with Long Short Term Memory
 
 ## Model Architecture
 
-
 ## Conclusion
-
 
 ## References
 1. [LSTM](https://medium.com/@rebeen.jaff/what-is-lstm-introduction-to-long-short-term-memory-66bd3855b9ce)
