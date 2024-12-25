@@ -41,7 +41,7 @@ Output: "QUEEN: So, let's end this and make a great confession.
 4. **Generate Text**: Use the `generate_text` function with a starting string to produce new text.
 
 ## Conclusion
-This project builds on the foundational work provided in The Clever Programmer's Text Generation Model using Python by expanding the potential of LSTMs for generating coherent text sequences. While the model captures the essence of the dataset, I am working on further improvements that can be achieved with fine-tuning and other architectures.
+This project builds on the foundational work provided in The Clever Programmer's Text Generation Model using Python by expanding the potential of LSTMs for generating coherent text sequences. While the model captures the essence of the dataset, I am working on further improvements that can be achieved with fine-tuning and other advanced architectures.
 
 ## References
 1. [LSTM](https://medium.com/@rebeen.jaff/what-is-lstm-introduction-to-long-short-term-memory-66bd3855b9ce)
